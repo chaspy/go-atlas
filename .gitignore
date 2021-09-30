@@ -1,3 +1,5 @@
+### https://raw.github.com/github/gitignore/cb0c6ef7ac68f2300409ee85501d9ad432cb4c7e/Go.gitignore
+
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -13,3 +15,5 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+
