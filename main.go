@@ -21,6 +21,10 @@ func main() {
 
 	client := mongodbatlas.NewClient(tc)
 	projects, _, err := client.Projects.GetAllProjects(context.Background(), nil)
+	if err != nil {
+		log.Fatalf(err.Error())
+	}
 
-	fmt.Printf("%s", projects)
+	fmt.Printf("%#v", projects)
+//	fmt.Printf("%#v", res)
 }
