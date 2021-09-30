@@ -20,11 +20,15 @@ func main() {
 	}
 
 	client := mongodbatlas.NewClient(tc)
-	projects, _, err := client.Projects.GetAllProjects(context.Background(), nil)
+  
+  ctx := context.Background()
+  clusterName := "test-source-cluster"
+  groupID := "6155d1572d865910d4137d3a"
+
+	cluster, _, err := client.Clusters.Get(ctx, groupID, clusterName,)
 	if err != nil {
 		log.Fatalf(err.Error())
 	}
 
-	fmt.Printf("%#v", projects)
-//	fmt.Printf("%#v", res)
+	fmt.Printf("%#v", cluster)
 }
