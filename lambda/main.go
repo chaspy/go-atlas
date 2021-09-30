@@ -12,7 +12,7 @@ import (
 	"go.mongodb.org/atlas/mongodbatlas"
 )
 
-func hello() {
+func hello()(string) {
 	publicKey := os.Getenv("MONGODB_ATLAS_PUBLIC_KEY")
 	privateKey := os.Getenv("MONGODB_ATLAS_PRIVATE_KEY")
 	t := digest.NewTransport(publicKey, privateKey)
@@ -32,7 +32,9 @@ func hello() {
 		log.Fatalf(err.Error())
 	}
 
-	fmt.Printf("%#v", cluster)
+	fmt.Printf("%#v", cluster.Name)
+
+	return cluster.Name
 }
 
 func main() {

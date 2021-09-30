@@ -30,5 +30,5 @@ func main() {
 		log.Fatalf(err.Error())
 	}
 
-	fmt.Printf("%#v", cluster)
+	fmt.Printf("%#v", cluster.Name)
 }
